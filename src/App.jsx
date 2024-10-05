@@ -27,7 +27,7 @@ function App() {
             <Route path='/skills' element={<SkillList/>}/>
             <Route path='/experience' element={<Experience/>}/>
           </Routes>
-        <img className='w-full disable-anti-aliasing min-w-[576px] -scale-y-100' src='src/assets/pixelart/header-bottom.png' inert='true' />
+        <img className='w-full disable-anti-aliasing min-w-[576px] -scale-y-100' src='assets/pixelart/header-bottom.png' inert='true' />
         <Footer/>
       </div>
     </BrowserRouter>
