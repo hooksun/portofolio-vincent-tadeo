@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  @apply bg-primary text-highlight relative;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.disable-anti-aliasing{
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+a{
+  @apply text-blue-600 underline visited:text-purple-600
+}
+
+.highlight{
+  filter: drop-shadow(0 0 1px rgb(123, 240, 255));
+  @apply bg-gradient-to-br from-blue-600 to-red-600 bg-clip-text text-transparent font-bold capitalize /* drop-shadow-[0_0_1px_rgb(210,210,210)] */
+}
+
+@keyframes swipe-right{
+  from{transform: translate(0, 0);}
+  to{transform: translate(-50%, 0);}
+}
+
+@keyframes swipe-left{
+  from{transform: translate(-50%, 0);}
+  to{transform: translate(0, 0);}
+}
+
+@keyframes run-across{
+  from{right: -20%}
+  to{right: 120%;}
+}
+
+@keyframes fall{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(1200%);
+    display: none;
+  }
+}
+
+@keyframes climb{
+  from{
+    top: 0;
+  }
+  to{
+    top: 80%;
+  }
+}
+
+.climbing-fox{
+  animation: climb 10s linear alternate infinite;
+}
+
+@supports (animation-timeline: view()) {
+  .climbing-fox{
+    animation: climb;
+    animation-timeline: view();
+  }
+}
+
+.perspective-1{
+  perspective: 10px;
+  perspective-origin: top left;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
