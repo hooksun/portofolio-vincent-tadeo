@@ -11,7 +11,7 @@ export default function PixelartHeader(){
     const [paused, setPaused] = useState(true)
 
     return <div className="w-full min-w-[576px] aspect-[24/10] relative contain-paint flex preserve-3d items-start -z-10">
-        <img className='w-full disable-anti-aliasing' id='header-background' src={'assets/pixelart/back.png'} inert='true'/>
+        <img className='w-full disable-anti-aliasing' id='header-background' src={background} inert='true'/>
         <div className={'w-[1000%] left-[-35%] flex animate-[midground-pan_36s_linear_infinite]' + (paused ? ' pause':'')} id='header-midground' inert='true'>
             <img className='flex-1 disable-anti-aliasing' src={midground}/>
             <img className='flex-1 disable-anti-aliasing' src={midground}/>

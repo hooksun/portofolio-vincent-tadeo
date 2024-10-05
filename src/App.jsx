@@ -6,6 +6,7 @@ import SkillList from './components/SkillList'
 import { BrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
 import Overview from './components/Overview'
 import Experience from './components/Experience'
+import borderBottom from '/src/assets/pixelart/header-bottom.png'
 
 function App() {
 
@@ -20,14 +21,14 @@ function App() {
         <PixelartHeader />
         <div className='sticky top-0 z-20'>
           <Navbar/>
-          <img className='w-full disable-anti-aliasing min-w-[576px]' src='src/assets/pixelart/header-bottom.png' inert='true' />
+          <img className='w-full disable-anti-aliasing min-w-[576px]' src={borderBottom} inert='true' />
         </div>
           <Routes>
             <Route path='/' element={<Overview/>}/>
             <Route path='/skills' element={<SkillList/>}/>
             <Route path='/experience' element={<Experience/>}/>
           </Routes>
-        <img className='w-full disable-anti-aliasing min-w-[576px] -scale-y-100' src='assets/pixelart/header-bottom.png' inert='true' />
+        <img className='w-full disable-anti-aliasing min-w-[576px] -scale-y-100' src={borderBottom} inert='true' />
         <Footer/>
       </div>
     </BrowserRouter>

@@ -1,8 +1,10 @@
 import SkillListItem from "./SkillListItem";
+import ladder from '/src/assets/pixelart/ladder.png'
+import foxClimb from '/src/assets/pixelart/fox-climb.gif'
 
 export default function SkillList(){
 
-    const logoFolderPath = 'src/assets/logos/'
+    const logoFolderPath = 'logos/'
 
 
     return <div className="relative w-full py-8 grid grid-cols-[1fr,min(80%,80ch),1fr]">
@@ -30,9 +32,9 @@ export default function SkillList(){
             </div>
         </div>
         <div className="sticky h-[80vh] w-full hidden justify-center top-[10vh] my-[10vh] md:flex">
-            <img className="h-full disable-anti-aliasing" src="src/assets/pixelart/ladder.png" />
+            <img className="h-full disable-anti-aliasing" src={ladder} />
             <div className="absolute h-full climbing-fox">
-                <img className="h-1/5 disable-anti-aliasing" src="src/assets/pixelart/fox-climb.gif" />
+                <img className="h-1/5 disable-anti-aliasing" src={foxClimb} />
             </div>
         </div>
     </div>

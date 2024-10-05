@@ -6,7 +6,7 @@ import PortraitCarousel from "./PortraitCarousel";
 export default function Experience(){
 
     const imagesFromFolder = (folder, length) => 
-        Array.from({length: length}).map((_, i) => 'src/assets/images/' + folder + '/' + (i+1) + '.png')
+        Array.from({length: length}).map((_, i) => 'images/' + folder + '/' + (i+1) + '.png')
 
     return <div>
         <ProjectSection
@@ -31,6 +31,6 @@ export default function Experience(){
             title="Second freelance"
             desc={`For my second freelancing gig, I was tasked with adding automation for a personality test used in a youth camp. ... . The first step is emailing each participant a link to the form that the participants will fill out. the participants' responses are then processed and sent to experts that will analyze and create a summary. After ..., a pdf report containing the processed data and summary is generated and sent back to the participant's email`}
         />
-        proc gen, A unity project where I experimented with procedural dungeon generation. The dungeon includes rooms with multiple floors, pathways connecting each room, enemy AI with custom made pathfinding in each room, and many more
+        {/* proc gen, A unity project where I experimented with procedural dungeon generation. The dungeon includes rooms with multiple floors, pathways connecting each room, enemy AI with custom made pathfinding in each room, and many more */}
     </div>
 }
