@@ -6,7 +6,6 @@ export default function SkillList(){
 
     const logoFolderPath = 'logos/'
 
-
     return <div className="relative w-full py-8 grid grid-cols-[1fr,min(80%,80ch),1fr]">
         <div className="w-full col-start-2 flex flex-col items-center gap-8">
             <SkillListItem logo={logoFolderPath + 'unity.png'} desc="Unity, a game engine for making your bad game ideas a reality" />
