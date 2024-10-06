@@ -19,7 +19,7 @@ function App() {
           </div>
         } */}
         <PixelartHeader />
-        <div className='sticky top-0 z-20'>
+        <div className='sticky top-0 z-50'>
           <Navbar/>
           <img className='w-full disable-anti-aliasing min-w-[576px]' src={borderBottom} inert='true' />
         </div>

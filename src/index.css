@@ -27,7 +27,7 @@
 }
 
 a{
-  @apply text-blue-600 underline visited:text-purple-600
+  @apply text-blue-600 underline
 }
 
 .highlight{

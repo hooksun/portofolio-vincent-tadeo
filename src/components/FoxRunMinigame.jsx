@@ -24,7 +24,7 @@ export default function FoxRunMinigame(){
     return <div className="w-full relative mt-24 min-w-[576px]">
         <img className='w-full disable-anti-aliasing' src={track} inert='true'/>
         {animating &&
-            <div className='w-1/12 absolute bottom-full animate-[run-across_5s_linear_forwards] cursor-pointer' onClick={() => setDead(true)}>
+            <div className='w-1/12 absolute bottom-full animate-[run-across_5s_linear_forwards] cursor-pointer z-40' onClick={() => setDead(true)}>
                 {!dead ? 
                     <img src={foxRun} className='w-full disable-anti-aliasing -scale-x-100' inert='true' />
                     :
