@@ -17,7 +17,13 @@ export default function Overview(){
             At BINUS, I learned a lot of other programming languages such as C, Javascript, Python, Java, and more, which greatly expanded my knowledge and skills. I also learned some valuable lessons, one of which is that good code comes from a balance between performance, readibility, and maintainability.
         </div>
         <div className="w-4/5 max-w-[80ch]">
-            During my studies, I've also gotten a few <span className="highlight">freelancing</span> opportunities, all of which help enhance my skills in web development using react
+            During my studies, I've also gotten a few <span className="highlight">freelancing</span> opportunities. These gigs gave me valuable experience to communicate and work with clients on their needs. It also greatly enhances my skills in web development using frameworks such as React.
+        </div>
+
+        <div className="grid grid-cols-3 gap-[10%] w-4/5 max-w-[80ch]">
+            <a href="https://github.com/hooksun" target="_blank"><img src="logos/github.png"/></a>
+            <a href="mailto:vincent.tadeo1206@gmail.com" target="_blank"><img src="logos/gmail.png"/></a>
+            <a href="https://www.linkedin.com/in/vincent-tadeo-07312332a" target="_blank"><img src="logos/linkedin.png"/></a>
         </div>
     </div>
 }

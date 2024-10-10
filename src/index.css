@@ -31,8 +31,8 @@ a{
 }
 
 .highlight{
-  filter: drop-shadow(0 0 1px rgb(123, 240, 255));
-  @apply bg-gradient-to-br from-blue-600 to-red-600 bg-clip-text text-transparent font-bold capitalize /* drop-shadow-[0_0_1px_rgb(210,210,210)] */
+  filter: drop-shadow(0 0 1px #badaff);
+  @apply bg-gradient-to-br from-blue-600 to-red-600 bg-clip-text text-blue-300 font-bold capitalize /* drop-shadow-[0_0_1px_rgb(210,210,210)] */
 }
 
 @keyframes swipe-right{

@@ -9,12 +9,14 @@ export default function SkillList(){
     return <div className="relative w-full py-8 grid grid-cols-[1fr,min(80%,80ch),1fr]">
         <div className="w-full col-start-2 flex flex-col items-center gap-8">
             <SkillListItem logo={logoFolderPath + 'unity.png'} desc="Unity, a game engine for making your bad game ideas a reality" />
-            <SkillListItem logo={logoFolderPath + 'cs.png'} desc="C#, the programming language used by the unity engine and many other stuff" />
+            <SkillListItem logo={logoFolderPath + 'cs.png'} desc="C#, the programming language used by the unity engine and many more" />
             <SkillListItem desc="html, css, javascript, the 3 main ingredients of web development">
                 <div className="grid grid-cols-[repeat(3,5rem)] h-20">
                     <img className="h-20" src={logoFolderPath + 'html.png'}/>
                     <img className="h-20" src={logoFolderPath + 'css.svg'}/>
-                    <img className="h-20" src={logoFolderPath + 'js.png'}/>
+                    <div className="h-20 aspect-square flex justify-center">
+                        <img className="h-full" src={logoFolderPath + 'js.png'}/>
+                    </div>
                 </div>
             </SkillListItem>
             <SkillListItem logo={logoFolderPath + 'react.svg'} desc="React, a component based frontend development framework" />

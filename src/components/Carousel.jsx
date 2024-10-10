@@ -47,7 +47,7 @@ export default function Carousel(props){
         setCurrentPage(to)
     }
 
-    return <div className="relative flex items-center aspect-video overflow-hidden">
+    return <div className="relative flex items-center aspect-video overflow-hidden rounded">
         <div className={"absolute flex w-[200%] h-full" + (animate === 0?"":" animate-[swipe-"+(animate===1?"right":"left")+"_300ms_ease-in-out_1_forwards]")}>
             <img className="object-cover w-1/2 h-full" src={left}/>
             <img className="object-cover w-1/2 h-full" src={right}/>
@@ -62,7 +62,7 @@ export default function Carousel(props){
             {props.images.map((e, i) => <input className="cursor-pointer" key={i} type="radio" checked={currentPage === i} onChange={() => moveTo(i)} />)}
         </div>
         <div className="hidden">
-            {props.images.map(e => <img src={e}/>)}
+            {props.images.map(e => <img key={e} src={e}/>)}
         </div>
     </div>
 }
