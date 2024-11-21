@@ -10,7 +10,7 @@ export default function FoxRunMinigame(){
     const setRenderQueue = useRenderQueue()
 
     useEffect(() => {
-        const interval = setInterval(startRun, 15000)
+        const interval = setInterval(startRun, 60000)
 
         return () => clearInterval(interval)
     }, [])
