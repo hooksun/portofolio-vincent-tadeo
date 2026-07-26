@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --background: #322c43;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #322c43;
+  --color-secondary: #693f55;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.disable-anti-aliasing {
+  image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated; /* Universal support since 2021 */
+  image-rendering: optimize-contrast; /* CSS3 Proposed */
+  -ms-interpolation-mode: nearest-neighbor; /* IE8+ */
+}
+
+a:not(.link-button) {
+  @apply text-blue-600 underline;
+}
+
+.highlight {
+  filter: drop-shadow(0 0 1px #badaff);
+  @apply bg-linear-to-br from-blue-600 to-red-600 bg-clip-text text-blue-300 font-bold /* drop-shadow-[0_0_1px_rgb(210,210,210)] */;
+}
+
+@keyframes swipe-right {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes swipe-left {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes run-across {
+  from {
+    right: -20%;
+  }
+  to {
+    right: 120%;
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1200%);
+    display: none;
+  }
+}
+
+@keyframes climb {
+  from {
+    top: 0;
+  }
+  to {
+    top: 80%;
+  }
+}
+
+.climbing-fox {
+  animation: climb 10s linear alternate infinite;
+}
+
+@supports (animation-timeline: view()) {
+  .climbing-fox {
+    animation: climb;
+    animation-timeline: view();
+  }
+}
+
+.perspective-1 {
+  perspective: 10px;
+  perspective-origin: top left;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}

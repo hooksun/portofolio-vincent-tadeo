@@ -1,0 +1,50 @@
+.fox:hover {
+  --border-width: 1px;
+  --border-blur: 1px;
+
+  ---border-width: calc(-1 * var(--border-width));
+  filter: drop-shadow(
+      var(--border-width) var(--border-width) var(--border-blur) white
+    )
+    drop-shadow(
+      var(---border-width) var(---border-width) var(--border-blur) white
+    )
+    drop-shadow(
+      var(--border-width) var(---border-width) var(--border-blur) white
+    )
+    drop-shadow(
+      var(---border-width) var(--border-width) var(--border-blur) white
+    );
+}
+
+.pause {
+  animation-play-state: paused !important;
+}
+
+@keyframes foreground-pan {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(5 / 6 * -100%));
+  }
+}
+
+@keyframes midground-pan {
+  from {
+    transform: translateX(0) translateZ(-5px) scale(1.5);
+    transform-origin: top left;
+  }
+  to {
+    transform: translateX(-50%) translateZ(-5px) scale(1.5);
+    transform-origin: top center;
+  }
+}
+
+.foreground-animation {
+  animation: foreground-pan 18s linear infinite
+}
+
+.midground-animation {
+  animation: midground-pan 36s linear infinite;
+}
